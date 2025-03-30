@@ -16,8 +16,9 @@ body {
   }
   
   header h2 {
-    font-size: 1.2em;
+    font-size: 25px;
     font-weight: 400;
+    margin-bottom: 5px;
   }
   
   /* id card bix */
@@ -121,4 +122,22 @@ body {
 .card-footer h2{
     font-size: 40px;
     margin-top: 0;
+}
+
+
+button {
+  background-color: white;
+  color: #E4883A;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f7f7f7;
 }
