@@ -20,11 +20,11 @@ body {
     font-weight: 400;
   }
   
-  /* 🟧 주민등록증 스타일 박스 */
+  /* id card bix */
   .id-card {
     position: relative;
     width: 900px;
-    height: 565px; /* 1.586 비율 */
+    height: 565px; 
     background-color: #E4883A;
     border-radius: 30px;
     margin: 40px auto;
@@ -35,7 +35,7 @@ body {
     box-sizing: border-box;
   }
   
-  /* 🦁 백그라운드 사자 */
+  /* 백그라운드 사자 */
   .bg-lion {
     position: absolute;
     top: 60%;
@@ -46,11 +46,11 @@ body {
     z-index: 0;
   }
   
-  /* 📄 왼쪽 텍스트 블럭 */
+  /* 왼쪽 텍스트 블럭 */
   .card-left {
     flex: 1;
     display: flex;
-    flex-direction: column;      /* ⬅️ 이게 핵심! */
+    flex-direction: column;    
     justify-content: flex-start;
     align-items: center;
     gap: 8px;
@@ -59,7 +59,7 @@ body {
   
   .card-left h1 {
     font-size: 65px;
-    margin-top: 0px;  /* 위로 올리고 싶을 때 */
+    margin-top: 0px;  
     margin-bottom: 30px;
   }
   
@@ -77,13 +77,13 @@ body {
   }
   
   .card-left p {
-    font-size: 24px;
+    font-size: 20px;
     margin: 4px 0;
     text-align: left;
     word-break: keep-all;
   }
   
-  /* 📷 오른쪽 사진 */
+  /* 프로필 사진 */
   .card-right {
     width: 300px;
     z-index: 1;
@@ -94,21 +94,22 @@ body {
     border-radius: 20px;
     object-fit: cover;
   }
-  
-  /* ⬇️ 하단 중앙 로고/텍스트 */
+
+  /* 하단부 */
   .card-footer {
     position: absolute;
     bottom: 10px;
+    right: 0px;
     width: 100%;
-    text-align: center;
     z-index: 2;
   }
+
   
   .card-footer img {
     position: absolute;
-    left: 20px;
-    bottom: 30px;
-    width: 80px;
+    left: 110px;
+    bottom: 40px;
+    width: 100px;
   }
   
   .card-footer p {
