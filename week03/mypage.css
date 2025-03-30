@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    background-color: #1C1C1C;
+    color: white;
+    text-align: center;
+  }
+  
+  header {
+    padding-top: 40px;
+  }
+  
+  #logo_sookmutsa {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  header h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  
+  /* id card bix */
+  .id-card {
+    position: relative;
+    width: 900px;
+    height: 565px; 
+    background-color: #E4883A;
+    border-radius: 30px;
+    margin: 40px auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  
+  /* 백그라운드 사자 */
+  .bg-lion {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 589px;
+    opacity: 0.4;
+    z-index: 0;
+  }
+  
+  /* 왼쪽 텍스트 블럭 */
+  .card-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;    
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    z-index: 1;
+  }
+  
+  .card-left h1 {
+    font-size: 65px;
+    margin-top: 0px;  
+    margin-bottom: 30px;
+  }
+  
+  .card-left h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-top: 0;
+  }
+  
+  .card-left h3 {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  
+  .card-left p {
+    font-size: 20px;
+    margin: 4px 0;
+    text-align: left;
+    word-break: keep-all;
+  }
+  
+  /* 프로필 사진 */
+  .card-right {
+    width: 300px;
+    z-index: 1;
+  }
+  
+  .profile-pic {
+    width: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  /* 하단부 */
+  .card-footer {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    width: 100%;
+    z-index: 2;
+  }
+
+  
+  .card-footer img {
+    position: absolute;
+    left: 110px;
+    bottom: 40px;
+    width: 100px;
+  }
+  
+  .card-footer p {
+    font-size: 32px;
+    margin: 0;
+    color: white;
+  }
+
+.card-footer h2{
+    font-size: 40px;
+    margin-top: 0;
+}
+
+
+button {
+  background-color: white;
+  color: #E4883A;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f7f7f7;
+}
