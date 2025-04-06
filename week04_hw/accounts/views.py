@@ -25,3 +25,5 @@ def login(request):
         
     return render(request, "login.html")    
 
+def main(repuest):
+    return render(repuest, "main.html")
