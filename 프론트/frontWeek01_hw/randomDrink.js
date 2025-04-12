@@ -16,6 +16,8 @@ function getRandom(arr) {
 function getBuy() {
   let wallet = Math.floor(Math.random() * 3001) + 2000;
   // 지갑에 있는 돈: 2000 ~ 5000원
+  const drinkHisory = [];
+  // 구매한 음료 목록을 저장할 배열, for
 
   console.log("🥤 음료수 랜덤 뽑기 ⭐️");
   console.log(`💰 현재 잔액 : ${wallet}원 💰`);
@@ -38,5 +40,7 @@ function getBuy() {
       );
     }
   }
+  console.log("📝 구매한 음료 목록: " + drinkHisory.join(", "));
+  // 구매한 음료 목록 출력
 }
 getBuy(); // 프로그램 (함수) 실행
