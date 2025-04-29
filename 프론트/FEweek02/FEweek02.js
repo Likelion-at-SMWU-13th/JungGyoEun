@@ -39,6 +39,11 @@ function addTodo(event) {
     if (target.classList.contains("delete-btn")) {
       target.parentElement.remove();
     }
+
+    /// 할 일 항목 클릭 시 (완료 표시)
+    else if (target.tagName === "SPAN") {
+      target.parentElement.classList.toggle("completed");
+    }
   }
   // 할 일 목록에 클릭 이벤트 리스너 추가
   todoList.addEventListener("click", handleTodoClick);
