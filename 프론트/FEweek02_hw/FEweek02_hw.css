@@ -1,0 +1,88 @@
+body {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+.profile-text h3 {
+  padding-top: 15px;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.profile-text p {
+  color: gray;
+  font-size: 13px;
+  margin-top: 0;
+}
+
+.feed-img {
+  width: 100%;
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.left-buttons button,
+.right-buttons button,
+.more-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.left-buttons {
+  display: flex;
+}
+
+.like-btn,
+.cmt-btn,
+.send-btn {
+  width: 25px;
+  padding-right: 10px;
+}
+
+.save-btn {
+  width: 23px;
+}
+
+span {
+  display: block;
+  margin: 0px 15px 0px;
+}
+
+.feed-text {
+  display: flex;
+  padding-left: 15px;
+  align-items: center;
+}
+
+.profile-text h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.feed-text p {
+  margin: 0 5px;
+}
+
+.more-btn {
+  font-size: 16px;
+  color: gray;
+}
