@@ -12,3 +12,30 @@ const actionMovie = movies.filter((movie) => {
   return movie.genre.includes("액");
 });
 console.log("액이 들어가는 장르의 영화 목록", actionMovie);
+
+async function fetchMovies() {
+  try {
+    const response = await fetch("movies.json");
+    const movies = await response.json();
+    const container = document.getElementById("movieContainer");
+    const movieList = movies.filter((movie) => {
+      return movie.genre === "액션"; /// includes 없이 filter 쓰는 방법
+    });
+    movieList.forEach((movie) => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <img src="${movie.poster}" alt="${movie.title}">
+        <div class="card-body">
+            <h2 class="card-title">${movie.title}</h2>
+            <p class="card-rating">⭐️ ${movie.rating}</p>
+            <p class="card-description">${movie.description}</p>
+        `;
+      container.appendChild(card);
+    });
+  } catch (error) {
+    console.error("에러 발생:", error);
+  }
+}
+fetchMovies();
