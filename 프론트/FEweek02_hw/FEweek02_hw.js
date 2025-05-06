@@ -21,3 +21,23 @@ likeBtn.addEventListener("click", () => {
     liked = false;
   }
 });
+
+const moreBtn = document.getElementById("more-btn");
+const feedText = document.getElementById("feed-description");
+
+const shortText = "어버이날 기념 꽃다발!!!!♡ 미리 낳";
+const fullText = shortText + " 아 주셔서 감사합니다";
+
+let expanded = false;
+
+moreBtn.addEventListener("click", () => {
+  if (!expanded) {
+    feedText.textContent = fullText;
+    moreBtn.textContent = "접기";
+    expanded = true;
+  } else {
+    feedText.textContent = shortText;
+    moreBtn.textContent = "...더 보기";
+    expanded = false;
+  }
+});
