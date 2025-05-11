@@ -1,0 +1,23 @@
+/* 전체 배경 색 */
+body {
+  background-color: #f0f0f0;
+}
+
+/* 검색창 */
+.search-text {
+  background-color: #ffffff;
+  border: 0.5px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  width: 200px;
+}
+
+/* 검색 버튼 */
+.search-btn {
+  background-color: #ff8c00; /* 주황색 */
+  color: white;
+  border: 0.5px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+}
