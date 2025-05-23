@@ -1,0 +1,36 @@
+header {
+  width: 100%;
+  display: flex; /* 로고와 nav를 가로로 정렬 */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  max-width: 40%;
+  text-align: center;
+  gap: 0px;
+  display: flex;
+  list-style: none;
+}
+
+.logo {
+  display: inline-block;
+  margin: 0;
+}
+
+nav {
+  display: flex; /* 가로로 정렬 */
+}
+
+ul {
+  display: flex; /* li 들을 가로로 정렬 */
+  list-style: none;
+}
+
+.profile {
+  display: inline-block;
+  margin-left: 670px;
+  margin-top: 10px;
+  border-radius: 10%;
+}
