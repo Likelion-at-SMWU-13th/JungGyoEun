@@ -1,5 +1,5 @@
 header {
-  width: 100%;
+  width: 1440px;
   display: flex; /* 로고와 nav를 가로로 정렬 */
   align-items: center;
   padding: 0;
@@ -7,30 +7,29 @@ header {
 }
 
 ul {
-  max-width: 40%;
+  width: 60%;
   text-align: center;
-  gap: 0px;
+  gap: 30px;
   display: flex;
   list-style: none;
 }
 
+li {
+  padding: 0 px;
+}
+
 .logo {
   display: inline-block;
-  margin: 0;
+  margin-left: 20px;
 }
 
 nav {
   display: flex; /* 가로로 정렬 */
 }
 
-ul {
-  display: flex; /* li 들을 가로로 정렬 */
-  list-style: none;
-}
-
 .profile {
   display: inline-block;
-  margin-left: 670px;
   margin-top: 10px;
+  margin-left: 800px;
   border-radius: 10%;
 }
