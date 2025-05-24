@@ -10,7 +10,6 @@ const Channel = () => {
     <div
       style={{
         display: "flex",
-        width: "100%",
         marginLeft: "20px",
         overflowX: "auto",
         gap: "10px",
