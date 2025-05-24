@@ -1,0 +1,48 @@
+header {
+  width: 1440px;
+  display: flex; /* 로고와 nav를 가로로 정렬 */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  width: 1120px;
+  text-align: center;
+  gap: 30px;
+  display: flex;
+  list-style: none;
+}
+
+li {
+  padding: 0 px;
+}
+
+.logo {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+nav {
+  display: flex; /* 가로로 정렬 */
+}
+
+.profile {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 70px;
+  border-radius: 10%;
+}
+
+.login-btn {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  border: none;
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 50px;
+  cursor: pointer;
+}
