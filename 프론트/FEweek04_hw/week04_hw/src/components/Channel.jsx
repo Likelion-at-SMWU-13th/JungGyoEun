@@ -12,7 +12,7 @@ const Channel = () => {
         display: "flex",
         marginLeft: "20px",
         overflowX: "auto",
-        gap: "10px",
+        gap: "15px",
         marginTop: "30px",
       }}
     >

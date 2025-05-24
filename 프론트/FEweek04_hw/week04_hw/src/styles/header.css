@@ -20,7 +20,7 @@ li {
 
 .logo {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 nav {
@@ -30,6 +30,6 @@ nav {
 .profile {
   display: inline-block;
   margin-top: 10px;
-  margin-left: 800px;
+  margin-left: 850px;
   border-radius: 10%;
 }
