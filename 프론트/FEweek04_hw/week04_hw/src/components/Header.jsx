@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.svg";
 import profile from "../assets/profile.jpeg";
 import "../styles/header.css";
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <header className="header">
       <img
@@ -22,10 +24,15 @@ const Header = () => {
           <li>애니</li>
           <li>뉴스</li>
         </ul>
-        <aside>
-          <img src={profile} className="profile" style={{ width: "30px" }} />
-        </aside>
       </nav>
+
+      {isLoggedIn ? (
+        <img src={profile} className="profile" />
+      ) : (
+        <button className="login-btn" onClick={() => setIsLoggedIn(true)}>
+          로그인
+        </button>
+      )}
     </header>
   );
 };

@@ -7,7 +7,7 @@ header {
 }
 
 ul {
-  width: 60%;
+  width: 1120px;
   text-align: center;
   gap: 30px;
   display: flex;
@@ -29,7 +29,20 @@ nav {
 
 .profile {
   display: inline-block;
-  margin-top: 10px;
-  margin-left: 850px;
+  width: 30px;
+  height: 30px;
+  margin-left: 70px;
   border-radius: 10%;
+}
+
+.login-btn {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  border: none;
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 50px;
+  cursor: pointer;
 }
