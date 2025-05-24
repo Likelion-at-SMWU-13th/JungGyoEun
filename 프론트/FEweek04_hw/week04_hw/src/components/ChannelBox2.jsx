@@ -11,6 +11,9 @@ const Box = styled.div`
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-15px);
 `;
 
 const ChannelBox2 = () => {

@@ -12,8 +12,9 @@ const Channel = () => {
         display: "flex",
         marginLeft: "20px",
         overflowX: "auto",
+        overflow: "visible",
         gap: "15px",
-        marginTop: "30px",
+        marginTop: "50px",
       }}
     >
       <ChannelBox1 />
