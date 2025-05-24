@@ -25,6 +25,7 @@ const Top20 = () => {
           overflowX: "auto",
           gap: "0",
           marginTop: "0",
+          overflow: "visible",
         }}
       >
         <Top1 />
