@@ -9,7 +9,7 @@ const Box = styled.div`
     transform: translateY(-15px);
   }
 `;
-const Top1 = () => {
+const Top = () => {
   return (
     <Box>
       <img src={number1} style={{ width: "40px" }} />
@@ -18,4 +18,4 @@ const Top1 = () => {
   );
 };
 
-export default Top1;
+export default Top;

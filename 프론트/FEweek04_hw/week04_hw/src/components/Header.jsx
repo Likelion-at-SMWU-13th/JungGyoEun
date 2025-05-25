@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../assets/logo.svg";
 import profile from "../assets/profile.jpeg";
 import "../styles/header.css";
 
-const Header = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+function Header() {
+  let isLoggedIn = false;
+
+  const handleLogin = () => {
+    const container = document.getElementById("login-box");
+    container.innerHTML = `<img src="${profile}" class="profile" />`;
+  };
 
   return (
     <header className="header">
-      <img
-        className="logo"
-        src={logo}
-        style={{
-          width: "150px",
-        }}
-      />
+      <img className="logo" src={logo} style={{ width: "150px" }} />
       <nav>
         <ul>
           <li>드라마</li>
@@ -26,15 +25,17 @@ const Header = () => {
         </ul>
       </nav>
 
-      {isLoggedIn ? (
-        <img src={profile} className="profile" />
-      ) : (
-        <button className="login-btn" onClick={() => setIsLoggedIn(true)}>
-          로그인
-        </button>
-      )}
+      <div id="login-box">
+        {isLoggedIn ? (
+          <img src={profile} className="profile" />
+        ) : (
+          <button className="login-btn" onClick={handleLogin}>
+            로그인
+          </button>
+        )}
+      </div>
     </header>
   );
-};
+}
 
 export default Header;

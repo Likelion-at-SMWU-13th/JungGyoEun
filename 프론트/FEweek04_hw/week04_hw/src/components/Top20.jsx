@@ -1,5 +1,5 @@
 import React from "react";
-import Top1 from "./Top1";
+import Top1 from "./Top";
 import Top2 from "./Top2";
 import Top3 from "./Top3";
 import Top4 from "./Top4";
