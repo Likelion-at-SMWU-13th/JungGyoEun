@@ -1,0 +1,52 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "썬더볼츠",
+      "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89578/89578_320.jpg",
+      "rating": 8.42,
+      "genre": "액션",
+      "description": "초능력 없음. 히어로 없음. 포기도 없음.\n별난 놈들의 예측불가 팀업이 폭발한다!"
+    },
+    {
+      "id": 2,
+      "title": "마인크래프트 무비",
+      "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89528/89528_320.jpg",
+      "rating": 7.32,
+      "genre": "코미디",
+      "description": "‘웰컴 투 오버월드’\n네 모든 상상이 네모난 현실이 된다!"
+    },
+    {
+      "id": 3,
+      "title": "파과",
+      "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89568/89568_320.jpg",
+      "rating": 8.25,
+      "genre": "액션",
+      "description": "지킬 게 생긴 킬러 VS 잃을 게 없는 킬러"
+    },
+    {
+      "id": 4,
+      "title": "거룩한 밤: 데몬 헌터스 ",
+      "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89548/89548_320.jpg",
+      "rating": 6.92,
+      "genre": "액션",
+      "description": "악을 숭배하는 집단에 의해 혼란에 빠진 도시,\n특별한 능력을 가진 어둠의 해결사 ‘거룩한 밤’ 팀"
+    },
+    {
+      "id": 5,
+      "title": "야당",
+      "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89454/89454_320.jpg",
+      "rating": 9.07,
+      "genre": "범죄",
+      "description": "대한민국 마약 수사의 뒷거래\n모든 것은 야당으로부터 시작된다!"
+    },
+    {
+      "id": 6,
+      "title": "해피엔드",
+      "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89520/89520_320.jpg",
+      "rating": 8.44,
+      "genre": "드라마",
+      "description": "세상이 흔들리던 날, 우정이 기울어졌다."
+    }
+  ]
+}
