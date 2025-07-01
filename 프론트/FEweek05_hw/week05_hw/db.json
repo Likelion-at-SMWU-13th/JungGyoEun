@@ -1,0 +1,84 @@
+{
+  "wishlist": [
+    {
+      "id": 1,
+      "itemName": "AKM CROS2 Half Top",
+      "brand": "아캄",
+      "price": 69000,
+      "imageUrl": "https://image.msscdn.net/thumbnails/images/goods_img/20250331/4969774/4969774_17436554681475_big.jpg?w=1200",
+      "category": "상의"
+    },
+    {
+      "id": 2,
+      "itemName": "Studded Bumpy Buckle Belt",
+      "brand": "이우가마카라스",
+      "price": 98000,
+      "imageUrl": "https://image.msscdn.net/thumbnails/images/goods_img/20240411/4043128/4043128_17132641528432_big.jpg?w=1200",
+      "category": "악세서리"
+    },
+    {
+      "id": 3,
+      "itemName": "NO.613 [SILVER] RING",
+      "brand": "센티멍",
+      "price": 38000,
+      "imageUrl": "https://image.msscdn.net/thumbnails/images/goods_img/20250117/4728333/4728333_17374460348715_big.jpg?w=1200",
+      "category": "악세서리"
+    },
+    {
+      "id": 4,
+      "itemName": "[한삐우 착용]스피드캣 발렛 - 다크초콜렛:웜화이트",
+      "brand": "푸마",
+      "price": 119000,
+      "imageUrl": "https://image.msscdn.net/thumbnails/images/goods_img/20250512/5104581/5104581_17479775561911_big.jpg?w=1200",
+      "category": "신발"
+    },
+    {
+      "id": 5,
+      "itemName": "[해쭈 PICK]아이 러브 코리락쿠마 티",
+      "brand": "허그유어스킨",
+      "price": 49000,
+      "imageUrl": "https://image.msscdn.net/thumbnails/images/goods_img/20250424/5064178/5064178_17471196757672_big.jpg?w=1200",
+      "category": "상의"
+    },
+    {
+      "id": 6,
+      "itemName": "Knee Pin-tuck Contrast Cargo Pants (Dark Gray)",
+      "brand": "아캄",
+      "price": 189000,
+      "imageUrl": "https://image.msscdn.net/thumbnails/images/goods_img/20250331/4969760/4969760_17436576295565_big.jpg?w=1200",
+      "category": "하의"
+    },
+    {
+      "id": 7,
+      "itemName": "Shirring ruffle midi skirt BLACK",
+      "brand": "미세키서울",
+      "price": 98000,
+      "imageUrl": "https://image.msscdn.net/thumbnails/images/prd_img/20250220/4813453/detail_4813453_17411459975413_big.jpg?w=1200",
+      "category": "하의"
+    },
+    {
+      "id": 8,
+      "itemName": "Bold Wrinkled Belted Long Boots",
+      "brand": "트리밍버드",
+      "price": 349000,
+      "imageUrl": "https://image.msscdn.net/thumbnails/images/goods_img/20250411/5018250/5018250_17446130537626_big.jpg?w=1200",
+      "category": "신발"
+    },
+    {
+      "id": 9,
+      "itemName": "TCM mini logo packable backpack",
+      "brand": "더콜디스트모먼트",
+      "price": 89000,
+      "imageUrl": "https://image.msscdn.net/thumbnails/images/goods_img/20250313/4895644/4895644_17433988189561_big.jpg?w=1200",
+      "category": "가방"
+    },
+    {
+      "id": 10,
+      "itemName": "Multicolour Embroidery Velvet Mini Bag",
+      "brand": "킴지수",
+      "price": 148000,
+      "imageUrl": "https://image.msscdn.net/thumbnails/images/goods_img/20240412/4049743/4049743_17129042054238_big.jpg?w=1200",
+      "category": "가방"
+    }
+  ]
+}
