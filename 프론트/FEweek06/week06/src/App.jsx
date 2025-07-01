@@ -1,12 +1,17 @@
-import React from "react";
-import "./App.css";
-import QuizApp from "./pages/QuizPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import QuizPage from "./pages/QuizPage";
+import ResultPage from "./pages/ResultPage";
 
 function App() {
   return (
-    <>
-      <QuizApp />
-    </>
+    <BrowserRouter>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<QuizPage />} />
+          <Route path="/result" element={<ResultPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
