@@ -1,11 +1,6 @@
-import { useState, useRef, useCallback } from "react"; // ① useRef import 하기
+import { useQuiz } from "../hooks/useQuiz"; // ① useRef import 하기
 
 const QuizApp = () => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [userAnswer, setUserAnswer] = useState("");
-  const [answers, setAnswers] = useState([]);
-  const inputRef = useRef(null); // ② inputRef 객체로 useRef( ) 생성
-
   const questions = [
     { question: "React에서 상태를 관리하는 Hook은?", answer: "useState" },
     {
@@ -15,26 +10,15 @@ const QuizApp = () => {
     { question: "DOM에 직접 접근할 때 사용하는 Hook은?", answer: "useRef" },
   ];
 
-  const handleSubmit = useCallback(() => {
-    const newAnswers = [...answers];
-    newAnswers[currentQuestion] = userAnswer;
-    setAnswers(newAnswers);
-
-    if (currentQuestion < questions.length - 1) {
-      // ④-1. 다음 문제로 이동하면서 input에 포커스
-      setCurrentQuestion((prev) => prev + 1);
-      setUserAnswer("");
-      setTimeout(() => inputRef.current?.focus(), 0);
-    }
-  }, [currentQuestion, userAnswer, answers, questions.length]);
-
-  const handleReset = useCallback(() => {
-    setCurrentQuestion(0);
-    setUserAnswer("");
-    setAnswers([]);
-    inputRef.current.value = ""; // ④-2. input 내용 지우기
-    inputRef.current.focus(); // ④-3. input에 포커스 하기
-  }, []);
+  const {
+    currentQuestion,
+    userAnswer,
+    setUserAnswer,
+    answers,
+    inputRef,
+    handleSubmit,
+    handleReset,
+  } = useQuiz(questions);
 
   return (
     <div className="quiz-container">
