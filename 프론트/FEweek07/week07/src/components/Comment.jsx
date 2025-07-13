@@ -60,7 +60,7 @@ const Comment = () => {
       .then((response) => {
         // 오류 없이 응답을 받으면
         console.log(response);
-        setComments(response.data);
+        setComments(response.data.reverse);
       })
       .catch((error) => {
         // 오류가 발생하면
@@ -75,18 +75,29 @@ const Comment = () => {
 
   return (
     <>
-      {comments.map((comment) => (
-        <CommentContainer
-          key={comment.id}
-          onClick={() => navigate(`/comment/${comment.id}`)}
-        >
-          <MetaInfo>
-            <Author>{comment.author}</Author>
-            <Time>{comment.timestamp}</Time>
-          </MetaInfo>
-          <CommentTxt>{comment.comment}</CommentTxt>
-        </CommentContainer>
-      ))}
+      {comments.map(
+        (
+          comment // comments를 map으로 돌려서 각 댓글을 CommentContainer로 렌더링
+        ) => (
+          // 각 댓글을 클릭하면 해당 댓글의 상세 페이지로 이동
+          // navigate(`/comment/${comment.id}`)로 이동
+          // comment.id는 각 댓글의 고유 ID로 사용
+          // 이 ID를 이용해 상세 페이지에서 해당 댓글의 정보를 가져올 수 있습니다.
+          // 예시: /comment/1, /comment/2 등
+          // 이 부분은 실제 API에서 댓글의 ID를 어떻게 관리하는지에 따라 달라질 수 있습니다.
+          // 여기서는 comment.id를 사용한다고 가정합니다.
+          <CommentContainer
+            key={comment.id}
+            onClick={() => navigate(`/comment/${comment.id}`)}
+          >
+            <MetaInfo>
+              <Author>{comment.author}</Author>
+              <Time>{comment.timestamp}</Time>
+            </MetaInfo>
+            <CommentTxt>{comment.comment}</CommentTxt>
+          </CommentContainer>
+        )
+      )}
     </>
   );
 };
