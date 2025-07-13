@@ -1,16 +1,39 @@
 import styled from "styled-components";
 import Button from "../components/Button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const DetailPage = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
+
+  const [detail, setDetail] = useState([]); // 게시글 상세 정보를 저장할 상태
+
+  const getDetail = () => {
+    axios
+      .get(`http://127.0.0.1:8000/entries/${id}/`)
+      .then((response) => {
+        // 게시글 상세 정보를 가져오면 상태에 저장
+        console.log(response);
+        setDetail(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  useEffect(() => {
+    getDetail();
+  }, [id]);
+
   return (
     <Wrapper>
       <Button txt="게시글 작성하기" onBtnClick={() => navigate("/write")} />
       <DetailWrapper>
-        <Author>성윤정</Author>
-        <Time>2025-06-25T22:54:21Z</Time>
-        <Comment>하이</Comment>
+        <Author>{detail.author}</Author>
+        <Time>{detail.timestamp}</Time>
+        <Comment>{detail.comment}</Comment>
         <BtnWrapper>
           <Button txt="수정" fontSize="1.875rem" />
           <Button txt="삭제" fontSize="1.875rem" />
