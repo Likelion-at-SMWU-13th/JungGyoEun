@@ -1,14 +1,15 @@
-import { useState } from "react";
 import styled from "styled-components";
 import Button from "../components/Button";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
-const WritePage = () => {
+const EditPage = () => {
   const navigate = useNavigate();
   const [author, setAuthor] = useState("");
   const [comment, setComment] = useState("");
   const baseURL = import.meta.env.VITE_API_BASE_URL; // 환경변수에서 API 기본 URL을 가져옴
+  const { id } = useParams(); // URL 파라미터에서 게시글 ID를 가져옴
 
   const onChangeAuthor = (e) => {
     setAuthor(e.target.value);
@@ -17,20 +18,38 @@ const WritePage = () => {
     setComment(e.target.value);
   };
 
-  const postComment = () => {
+  // 게시글 수정 페이지에서 게시글 ID를 이용해 기존 데이터를 가져오는 함수
+  useEffect(() => {
+    getDetail();
+  }, [id]);
+
+  const getDetail = () => {
     axios
-      .post(`${baseURL}/entries/`, {
+      .get(`${baseURL}/entries/${id}/`)
+      .then((response) => {
+        console.log(response);
+        setAuthor(response.data.author); // 게시글 작성자 이름을 상태에 저장
+        setComment(response.data.comment); // 게시글 내용을 상태에 저장
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const editComment = () => {
+    axios
+      .put(`${baseURL}/entries/${id}/`, {
         author: author,
         comment: comment,
       })
       .then((response) => {
         console.log(response);
-        alert("게시글이 작성이 완료되었습니다.");
+        alert("게시글이 수정이 완료되었습니다.");
         navigate("/");
       })
       .catch((error) => {
         console.error(error);
-        alert("게시글 작성에 실패했습니다.");
+        alert("게시글 수정에 실패했습니다.");
       });
   };
 
@@ -53,13 +72,13 @@ const WritePage = () => {
         />
       </FormGroup>
       <BtnWrapper>
-        <Button txt="작성하기" onBtnClick={postComment} />
+        <Button txt="수정하기" onBtnClick={editComment} />
       </BtnWrapper>
     </Wrapper>
   );
 };
 
-export default WritePage;
+export default EditPage;
 
 const Wrapper = styled.div`
   margin-top: 3.125rem;

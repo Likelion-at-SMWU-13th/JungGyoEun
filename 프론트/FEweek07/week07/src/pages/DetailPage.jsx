@@ -7,16 +7,29 @@ import axios from "axios";
 const DetailPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-
   const [detail, setDetail] = useState([]); // 게시글 상세 정보를 저장할 상태
+  const baseURL = import.meta.env.VITE_API_BASE_URL;
 
   const getDetail = () => {
     axios
-      .get(`http://127.0.0.1:8000/entries/${id}/`)
+      .get(`${baseURL}/entries/${id}/`)
       .then((response) => {
         // 게시글 상세 정보를 가져오면 상태에 저장
         console.log(response);
         setDetail(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const getDelete = () => {
+    axios
+      .delete(`${baseURL}/entries/${id}/`)
+      .then((response) => {
+        console.log(response);
+        alert("게시글이 삭제되었습니다.");
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);
@@ -35,8 +48,12 @@ const DetailPage = () => {
         <Time>{detail.timestamp}</Time>
         <Comment>{detail.comment}</Comment>
         <BtnWrapper>
-          <Button txt="수정" fontSize="1.875rem" />
-          <Button txt="삭제" fontSize="1.875rem" />
+          <Button
+            txt="수정"
+            fontSize="1.875rem"
+            onBtnClick={() => navigate(`/edit/${id}`)}
+          />
+          <Button txt="삭제" fontSize="1.875rem" onBtnClick={getDelete} />
         </BtnWrapper>
       </DetailWrapper>
     </Wrapper>
