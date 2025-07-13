@@ -53,14 +53,14 @@ const Comment = () => {
   const navigate = useNavigate();
   //   const [comments] = useState(MOCK_COMMENTS);
   const [comments, setComments] = useState([]); // comments response로 받은 게시글 배열을 저장
-  const baseURL = import.meta.env.VITE_API_BASE_URL; // 환경변수에서 API 기본 URL을 가져옴
+
   const getComment = () => {
     axios
-      .get(`${baseURL}/entries/`) // API에서 댓글 목록을 가져옴
+      .get("http://127.0.0.1:8000/entries/")
       .then((response) => {
         // 오류 없이 응답을 받으면
         console.log(response);
-        setComments(response.data);
+        setComments(response.data.reverse);
       })
       .catch((error) => {
         // 오류가 발생하면

@@ -8,7 +8,6 @@ const WritePage = () => {
   const navigate = useNavigate();
   const [author, setAuthor] = useState("");
   const [comment, setComment] = useState("");
-  const baseURL = import.meta.env.VITE_API_BASE_URL; // 환경변수에서 API 기본 URL을 가져옴
 
   const onChangeAuthor = (e) => {
     setAuthor(e.target.value);
@@ -19,7 +18,7 @@ const WritePage = () => {
 
   const postComment = () => {
     axios
-      .post(`${baseURL}/entries/`, {
+      .post("http://127.0.0.1:8000/entries/", {
         author: author,
         comment: comment,
       })

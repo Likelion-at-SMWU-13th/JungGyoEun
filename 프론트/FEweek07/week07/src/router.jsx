@@ -3,7 +3,6 @@ import App from "./App";
 import CommentPage from "./pages/CommentPage";
 import WritePage from "./pages/WritePage";
 import DetailPage from "./pages/DetailPage";
-import EditPage from "./pages/EditPage";
 
 const router = createBrowserRouter([
   {
@@ -21,10 +20,6 @@ const router = createBrowserRouter([
       {
         path: "comment/:id",
         element: <DetailPage />,
-      },
-      {
-        path: "edit/:id",
-        element: <EditPage />,
       },
     ],
   },
