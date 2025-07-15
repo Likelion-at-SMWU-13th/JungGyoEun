@@ -12,7 +12,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-box">
       <h2>로그인</h2>
       <div className="btns-container">
         <button className="kakao-btn" onClick={handleKakao}>
