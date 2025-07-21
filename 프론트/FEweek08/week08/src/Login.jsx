@@ -40,13 +40,11 @@ const Login = () => {
       <h2>로그인</h2>
       <div className="btns-container">
         <button className="kakao-btn" onClick={handleKakao}>
-          {" "}
-          // kakao-btn 클릭 시 handleKakao 함수 실행{" "}
+          // kakao-btn 클릭 시 handleKakao 함수 실행
           <img src={KakaoImg} alt="kakao_button" />
         </button>
         <button>
-          {"  "}
-          <img src={GoogleImg} alt="google_button" />
+          <img src={GoogleImg} alt="구글 로그인" />
         </button>
       </div>
     </div>
