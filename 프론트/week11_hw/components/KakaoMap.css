@@ -1,45 +1,35 @@
 .customoverlay {
   position: relative;
-  bottom: 30px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  border-bottom: 2px solid #ddd;
-  float: left;
-}
-.customoverlay:nth-of-type(n) {
-  border: 0;
-  box-shadow: 0px 1px 2px #888;
-}
-.customoverlay a {
-  display: block;
-  text-decoration: none;
-  color: #000;
+  border-radius: 16px;
+  padding: 7px 7px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #4a4a4a;
+  background: #ffffffcc;
+  border: 3px solid #f0f0f5;
   text-align: center;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: bold;
-  overflow: hidden;
-  background: #3c2a95;
-  background: #3c2a95
-    url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png)
-    no-repeat right 14px center;
+}
+
+.customoverlay a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
 }
 .customoverlay .title {
-  display: block;
-  text-align: center;
+  display: inline-block;
   background: #fff;
-  margin-right: 35px;
-  padding: 10px 15px;
-  font-size: 14px;
-  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
-.customoverlay:after {
-  content: "";
-  position: absolute;
-  margin-left: -12px;
-  left: 50%;
-  bottom: -12px;
-  width: 22px;
-  height: 12px;
-  background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
+
+.customoverlay.cafe {
+  border-color: #f6d9d9;
+}
+
+.customoverlay.food {
+  border-color: #dbfdda;
+}
+
+.customoverlay.alcohol {
+  border-color: #d7d8f4;
 }
