@@ -1,5 +1,6 @@
 .customoverlay {
   position: relative;
+  margin-bottom: 40px;
   border-radius: 16px;
   padding: 7px 7px;
   font-size: 10px;
@@ -31,5 +32,5 @@
 }
 
 .customoverlay.alcohol {
-  border-color: #d7d8f4;
+  border-color: #d7e8f4;
 }

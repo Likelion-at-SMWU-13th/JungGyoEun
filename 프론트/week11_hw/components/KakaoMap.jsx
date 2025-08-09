@@ -11,7 +11,16 @@ const KakaoMap = () => {
       style={{ width: "800px", height: "635px" }}
     >
       {/*카페1*/}
-      <MapMarker position={{ lat: 36.7730532058072, lng: 127.139546619755 }} />
+      <MapMarker
+        position={{ lat: 36.7730532058072, lng: 127.139546619755 }}
+        image={{
+          src: "public/marker-pink.png",
+          size: {
+            width: 50,
+            height: 50,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.7730532058072, lng: 127.139546619755 }}
         yAnchor={1}
@@ -28,7 +37,16 @@ const KakaoMap = () => {
       </CustomOverlayMap>
 
       {/*카페2*/}
-      <MapMarker position={{ lat: 36.8174658014083, lng: 127.156081953031 }} />
+      <MapMarker
+        position={{ lat: 36.8174658014083, lng: 127.156081953031 }}
+        image={{
+          src: "public/marker-pink.png",
+          size: {
+            width: 50,
+            height: 50,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.8174658014083, lng: 127.156081953031 }}
         yAnchor={1}
@@ -45,7 +63,16 @@ const KakaoMap = () => {
       </CustomOverlayMap>
 
       {/*카페3*/}
-      <MapMarker position={{ lat: 36.8169716641493, lng: 127.108606505071 }} />
+      <MapMarker
+        position={{ lat: 36.8169716641493, lng: 127.108606505071 }}
+        image={{
+          src: "public/marker-pink.png",
+          size: {
+            width: 50,
+            height: 50,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.8169716641493, lng: 127.108606505071 }}
         yAnchor={1}
@@ -62,7 +89,16 @@ const KakaoMap = () => {
       </CustomOverlayMap>
 
       {/*카페4*/}
-      <MapMarker position={{ lat: 36.8099244771819, lng: 127.104953158751 }} />
+      <MapMarker
+        position={{ lat: 36.8099244771819, lng: 127.104953158751 }}
+        image={{
+          src: "public/marker-pink.png",
+          size: {
+            width: 50,
+            height: 50,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.8099244771819, lng: 127.104953158751 }}
         yAnchor={1}
@@ -79,7 +115,16 @@ const KakaoMap = () => {
       </CustomOverlayMap>
 
       {/*술1*/}
-      <MapMarker position={{ lat: 36.81715566337, lng: 127.154753772351 }} />
+      <MapMarker
+        position={{ lat: 36.81715566337, lng: 127.154753772351 }}
+        image={{
+          src: "public/marker-blue.png",
+          size: {
+            width: 60,
+            height: 60,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.81715566337, lng: 127.154753772351 }}
         yAnchor={1}
@@ -96,7 +141,16 @@ const KakaoMap = () => {
       </CustomOverlayMap>
 
       {/*술2*/}
-      <MapMarker position={{ lat: 36.8111094320273, lng: 127.107082390136 }} />
+      <MapMarker
+        position={{ lat: 36.8111094320273, lng: 127.107082390136 }}
+        image={{
+          src: "public/marker-blue.png",
+          size: {
+            width: 60,
+            height: 60,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.8111094320273, lng: 127.107082390136 }}
         yAnchor={1}
@@ -113,7 +167,16 @@ const KakaoMap = () => {
       </CustomOverlayMap>
 
       {/*술3*/}
-      <MapMarker position={{ lat: 36.8336534938228, lng: 127.134466340664 }} />
+      <MapMarker
+        position={{ lat: 36.8336534938228, lng: 127.134466340664 }}
+        image={{
+          src: "public/marker-blue.png",
+          size: {
+            width: 60,
+            height: 60,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.8336534938228, lng: 127.134466340664 }}
         yAnchor={1}
@@ -126,7 +189,16 @@ const KakaoMap = () => {
       </CustomOverlayMap>
 
       {/*밥1*/}
-      <MapMarker position={{ lat: 36.8309076394909, lng: 127.135181982328 }} />
+      <MapMarker
+        position={{ lat: 36.8309076394909, lng: 127.135181982328 }}
+        image={{
+          src: "public/marker-green.png",
+          size: {
+            width: 40,
+            height: 40,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.8309076394909, lng: 127.135181982328 }}
         yAnchor={1}
@@ -143,7 +215,16 @@ const KakaoMap = () => {
       </CustomOverlayMap>
 
       {/*밥2*/}
-      <MapMarker position={{ lat: 36.811518030837, lng: 127.101493305993 }} />
+      <MapMarker
+        position={{ lat: 36.811518030837, lng: 127.101493305993 }}
+        image={{
+          src: "public/marker-green.png",
+          size: {
+            width: 40,
+            height: 40,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.811518030837, lng: 127.101493305993 }}
         yAnchor={1}
@@ -160,7 +241,16 @@ const KakaoMap = () => {
       </CustomOverlayMap>
 
       {/*밥3*/}
-      <MapMarker position={{ lat: 36.820537569738, lng: 127.188215320966 }} />
+      <MapMarker
+        position={{ lat: 36.820537569738, lng: 127.188215320966 }}
+        image={{
+          src: "public/marker-green.png",
+          size: {
+            width: 40,
+            height: 40,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.820537569738, lng: 127.188215320966 }}
         yAnchor={1}
@@ -177,7 +267,16 @@ const KakaoMap = () => {
       </CustomOverlayMap>
 
       {/*밥3*/}
-      <MapMarker position={{ lat: 36.810330226827, lng: 127.104156579858 }} />
+      <MapMarker
+        position={{ lat: 36.810330226827, lng: 127.104156579858 }}
+        image={{
+          src: "public/marker-green.png",
+          size: {
+            width: 40,
+            height: 40,
+          },
+        }}
+      />
       <CustomOverlayMap
         position={{ lat: 36.810330226827, lng: 127.104156579858 }}
         yAnchor={1}
