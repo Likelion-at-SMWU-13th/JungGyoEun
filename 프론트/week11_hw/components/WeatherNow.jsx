@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 
-/** 고정 좌표 (원하는 위/경도로 바꿔도 됨) */
 const FIXED_LAT = 36.805129;
 const FIXED_LON = 127.130894;
 
-/** 위경도 → 기상청 격자(nx, ny) */
 function toXY(lat, lon) {
   const RE = 6371.00877,
     GRID = 5,
@@ -39,10 +37,9 @@ function toXY(lat, lon) {
   };
 }
 
-/** 초단기실황: 현재시각 -40분 → 정시(HH00) */
 function baseForUltraNcst() {
-  const now = new Date(); // 브라우저 로컬시간(KST) 그대로 사용
-  now.setMinutes(now.getMinutes() - 40); // 발표 반영 여유
+  const now = new Date();
+  now.setMinutes(now.getMinutes() - 40);
   const y = now.getFullYear();
   const m = String(now.getMonth() + 1).padStart(2, "0");
   const d = String(now.getDate()).padStart(2, "0");
@@ -55,7 +52,7 @@ export default function WeatherNow() {
   const [err, setErr] = useState(null);
   useEffect(() => {
     const { nx, ny } = toXY(FIXED_LAT, FIXED_LON);
-    const serviceKey = import.meta.env.VITE_KMA_KEY; // Decoding 키 그대로
+    const serviceKey = import.meta.env.VITE_KMA_KEY;
 
     async function callOnce(base_date, base_time) {
       const qs = new URLSearchParams({
