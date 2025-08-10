@@ -158,7 +158,7 @@ export default function WeatherNow() {
   return (
     <div
       style={{
-        height: "250px",
+        height: "180px",
         width: "100vw",
         display: "flex",
         alignItems: "center",
