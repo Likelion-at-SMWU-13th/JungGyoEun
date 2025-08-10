@@ -8,7 +8,7 @@ const KakaoMap = () => {
     <Map
       center={{ lat: 36.805129, lng: 127.1308939 }}
       level={7}
-      style={{ width: "800px", height: "635px" }}
+      style={{ width: "800px", height: "600px", borderRadius: "1rem" }}
     >
       {/*카페1*/}
       <MapMarker
