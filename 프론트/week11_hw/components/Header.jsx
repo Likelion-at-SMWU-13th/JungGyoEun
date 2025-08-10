@@ -6,10 +6,10 @@ export default function Header() {
     <header
       style={{
         textAlign: "center",
-        padding: "16px 20px",
+        padding: "6px 20px",
       }}
     >
-      <h1 style={{ margin: 0, fontSize: 22, fontWeight: 800 }}>
+      <h1 style={{ margin: 0, fontSize: 22, fontWeight: 800, color: "#fff" }}>
         천안 나들이 코스 추천
       </h1>
       <p style={{ margin: "6px 0 0", fontSize: 14, color: "#555" }}>

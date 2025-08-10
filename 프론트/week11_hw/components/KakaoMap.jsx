@@ -1,4 +1,6 @@
+// src/components/KakaoMap.jsx
 import "./KakaoMap.css";
+import { useMemo, useState } from "react";
 import { Map, MapMarker, CustomOverlayMap } from "react-kakao-maps-sdk";
 
 const PLACES = [
@@ -35,7 +37,6 @@ const PLACES = [
     icon: { src: "/marker-pink.png", w: 50, h: 50 },
     link: "https://kko.kakao.com/0MLQJjnp_x",
   },
-
   // 술
   {
     type: "alcohol",
@@ -43,7 +44,7 @@ const PLACES = [
     lat: 36.81715566337,
     lng: 127.154753772351,
     icon: { src: "/marker-blue.png", w: 60, h: 60 },
-    link: "https://kko.kakao.com/Mvdyzrrc5q",
+    link: "https://kko.kakao.com/NGvlgEclto",
   },
   {
     type: "alcohol",
@@ -61,7 +62,6 @@ const PLACES = [
     icon: { src: "/marker-blue.png", w: 60, h: 60 },
     link: "https://kko.to/j6i8jqvhra",
   },
-
   // 밥
   {
     type: "food",
@@ -97,17 +97,52 @@ const PLACES = [
   },
 ];
 
+const FILTERS = [
+  { key: "all", label: "전체" },
+  { key: "cafe", label: "카페" },
+  { key: "food", label: "밥" },
+  { key: "alcohol", label: "술집" },
+];
+
 export default function KakaoMap() {
+  const [filter, setFilter] = useState("all");
+
+  const list = useMemo(
+    () => (filter === "all" ? PLACES : PLACES.filter((p) => p.type === filter)),
+    [filter]
+  );
+
   return (
-    <Map
-      center={{ lat: 36.805129, lng: 127.1308939 }}
-      level={7}
-      style={{ width: "800px", height: "600px", borderRadius: "1rem" }}
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: 8,
+        alignItems: "center",
+      }}
     >
-      {PLACES.map((p, i) => (
-        <MarkerWithOverlay key={`${p.type}-${i}`} place={p} />
-      ))}
-    </Map>
+      <div className="filter-bar" style={{ position: "relative" }}>
+        {FILTERS.map((f) => (
+          <button
+            key={f.key}
+            className={`filter-btn ${filter === f.key ? "active" : ""}`}
+            onClick={() => setFilter(f.key)}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+
+      <Map
+        center={{ lat: 36.805129, lng: 127.1308939 }}
+        level={7}
+        style={{ width: "800px", height: "600px", borderRadius: "1rem" }}
+      >
+        {list.map((p, i) => (
+          <MarkerWithOverlay key={`${p.type}-${i}`} place={p} />
+        ))}
+      </Map>
+    </div>
   );
 }
 
