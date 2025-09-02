@@ -1,8 +1,11 @@
 import styled from "styled-components";
+import { themeStyle } from "../dict/dict";
+import { useTheme } from "../contexts/ThemeContext";
 
 const ReviewItem = ({ title, comment, img }) => {
+  const { theme } = useTheme();
   return (
-    <ReviewDiv>
+    <ReviewDiv borderColor={themeStyle[theme]["borderColor"]}>
       <img src={img} alt="movieimg" />
       <div>
         <div className="title">{title || "제목"}</div>
