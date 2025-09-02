@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "극장판 귀멸의 칼날: 무한성편",
+      "img": "https://image.cine21.com/resize/cine21/poster/2025/0822/15_44_10__68a811ba280a8[X280,400].jpg",
+      "comment": "탄지로 일행이 떨어진 곳, 그곳은 혈귀의 본거지 《무한성》─“귀살대”와 “혈귀”의 최종 결전의 포문이 열린다."
+    },
+    {
+      "id": 2,
+      "title": "좀비딸",
+      "img": "https://image.cine21.com/resize/cine21/poster/2025/0730/11_04_16__68897da01d3eb[X280,400].jpg",
+      "comment": "나의 딸은 좀비다. 이 세상 마지막 남은 유일한 좀비"
+    },
+    {
+      "id": 3,
+      "title": "F1 더 무비",
+      "img": "https://image.cine21.com/resize/cine21/poster/2025/0609/09_54_01__684630a97d7eb[X280,400].jpg",
+      "comment": "최고가 되지 못한 전설 VS 최고가 되고 싶은 루키"
+    }
+  ]
+}
