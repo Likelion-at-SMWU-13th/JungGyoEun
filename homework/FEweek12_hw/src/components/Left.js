@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { useMember } from "../contexts/MemberContext";
 
-const Left = ({ setPart }) => {
+const Left = () => {
+  const { setPart } = useMember();
+
   return (
     <Wrapper>
       <button onClick={() => setPart("프론트엔드")}>프론트엔드</button>
