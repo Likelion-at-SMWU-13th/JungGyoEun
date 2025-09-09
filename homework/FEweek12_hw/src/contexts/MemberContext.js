@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useMemo } from "react";
 
 const MemberContext = createContext({
   part: "",
@@ -7,11 +7,10 @@ const MemberContext = createContext({
 
 export const MemberProvider = ({ children }) => {
   const [part, setPart] = useState("");
+  const value = useMemo(() => ({ part, setPart }), [part]);
 
   return (
-    <MemberContext.Provider value={{ part, setPart }}>
-      {children}
-    </MemberContext.Provider>
+    <MemberContext.Provider value={value}>{children}</MemberContext.Provider>
   );
 };
 
