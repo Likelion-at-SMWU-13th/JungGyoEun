@@ -16,9 +16,9 @@ function TodoItem({ todo }) {
         <span />
       </S.Check>
 
-      <S.ItemTitld className={todo.completed ? "done" : ""}>
+      <S.ItemTitle className={todo.completed ? "done" : ""}>
         {todo.title}
-      </S.ItemTitld>
+      </S.ItemTitle>
 
       <S.DeleteButton onClick={() => removeTodo(todo.id)} title="삭제">
         삭제

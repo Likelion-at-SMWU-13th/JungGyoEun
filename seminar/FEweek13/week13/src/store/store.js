@@ -6,7 +6,7 @@ const useTodoStore = create((set) => ({
     const title = rawTitle.trim();
     if (!title) return;
     set((state) => ({
-      todos: [...state.todos, { id: Date.Now(), title, completed: false }],
+      todos: [...state.todos, { id: Date.now(), title, completed: false }],
     }));
   },
   removeTodo: (id) =>
