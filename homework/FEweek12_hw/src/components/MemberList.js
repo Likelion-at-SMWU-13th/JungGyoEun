@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import member from "../sookmut";
 import { useMember } from "../contexts/MemberContext";
 
@@ -13,7 +13,7 @@ const MemberList = () => {
   return (
     <List>
       {memberlist.map((mem) => (
-        <Item>
+        <Item key={mem.id}>
           <div className="name">🦁 {mem.name}</div>
           <div className={mem.role === "아기사자" ? "baby" : "adult"}>
             {mem.role}
