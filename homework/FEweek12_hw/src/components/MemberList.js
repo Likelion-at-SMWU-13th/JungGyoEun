@@ -13,7 +13,7 @@ const MemberList = () => {
   return (
     <List>
       {memberlist.map((mem) => (
-        <Item>
+        <Item key={mem.id}>
           <div className="name">🦁 {mem.name}</div>
           <div className={mem.role === "아기사자" ? "baby" : "adult"}>
             {mem.role}
