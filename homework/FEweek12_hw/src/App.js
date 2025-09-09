@@ -1,5 +1,5 @@
 import Content from "./components/Content";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import { useMember } from "./contexts/MemberContext";
 
 function App() {

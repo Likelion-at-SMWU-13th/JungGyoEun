@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import member from "../sookmut";
 import { useMember } from "../contexts/MemberContext";
 
