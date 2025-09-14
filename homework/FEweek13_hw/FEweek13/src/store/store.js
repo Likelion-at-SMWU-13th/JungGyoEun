@@ -8,10 +8,12 @@ const useBookStore = create((set) => ({
   addBook: (book) => {
     const title = book.title.trim();
     const author = book.author.trim();
-    const price = book.price.trim();
+    const publisher = book.publisher?.trim();
+    const date = book.date;
+    const price = book.price;
     const imageUrl = book.imageUrl.trim();
 
-    if (title && author && price && imageUrl) {
+    if (title && author && publisher && price && imageUrl) {
       set((state) => {
         // 이미 wishlist에 있는 책인지 확인
         const existingItem = state.wishlist.find(
@@ -32,9 +34,11 @@ const useBookStore = create((set) => ({
             wishlist: [
               ...state.wishlist,
               {
-                id: Date.now(), // 고유 ID 생성
+                id: book.id,
                 title,
                 author,
+                publisher,
+                date,
                 price,
                 imageUrl,
                 isFavorite: false,
