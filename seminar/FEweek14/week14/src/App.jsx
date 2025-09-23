@@ -6,11 +6,12 @@ function App() {
     const reponse = await fetch(`https://jsonplaceholder.typicode.com/posts`);
     return await reponse.json();
   }
-  const { data: postsData } = useQuery({
+  const { data: postsData, isPending } = useQuery({
     queryKey: ["posts"],
     queryFn: getPosts,
   });
-  console.log("postsResult", postsData);
+  // console.log("postsResult", postsData);
+  if (isPending) return "로딩 중입니다...";
 
   const posts = postsData ?? [];
 
