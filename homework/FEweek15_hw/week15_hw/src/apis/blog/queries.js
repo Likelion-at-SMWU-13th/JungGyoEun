@@ -40,16 +40,13 @@ export const useReadUser = (userId) => {
 };
 
 // 회원 정보 삭제
-// 사용자 ID를 받아 DELETE 요청
-// 관련된 모든 캐시 무효화
-// 사용자 정보가 다시 필요할 경우를 대비해 캐시를 10분동안 보관할 수 있도록 설정
 export const useDeleteUser = () => {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: (userId) => deleteUser(userId),
-    onSuccess: () => {
+    onSuccess: (_data, variables) => {
       alert("성공적으로 삭제되었습니다");
-      queryClient.invalidateQueries({ queryKey: ["user"] });
+      queryClient.invalidateQueries({ queryKey: ["myPage", variables.userId] });
     },
   });
 };
