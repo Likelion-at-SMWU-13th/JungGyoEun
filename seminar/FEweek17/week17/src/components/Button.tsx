@@ -1,14 +1,16 @@
 import styled, { type CSSProperties } from "styled-components";
-import type { MouseEvent } from "react";
+import type { MouseEventHandler } from "react";
 
 type ButtonContainerProps = {
-  fontSize?: CSSProperties["fontSize"];
+  $fontSize?: CSSProperties["fontSize"];
 };
+
 interface ButtonProps {
   txt?: string;
-  onBtnClick?: MouseEvent;
+  onBtnClick?: MouseEventHandler<HTMLButtonElement>;
   fontSize?: string;
 }
+
 const Button = ({ txt, onBtnClick, fontSize }: ButtonProps) => {
   return (
     <ButtonContainer onClick={onBtnClick} $fontSize={fontSize}>

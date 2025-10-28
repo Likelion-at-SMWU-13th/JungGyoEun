@@ -1,15 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import type { CommentItenType } from "../types/comment";
 
-const Comment = ({ comments }) => {
+interface CommentProps {
+  comments: CommentItenType[];
+}
+
+const Comment = ({ comments }: CommentProps) => {
   const navigate = useNavigate();
-  const handleClickComment = (id) => {
+  const handleClickComment = (id: CommentItenType["id"]) => {
+    // 키 참조 방식 <-> 타입 직접 명시 id: number
     navigate(`/comment/${id}`);
   };
 
   return (
     <>
-      {comments.map((comment) => (
+      {comments.map((comment: CommentItenType) => (
         <CommentContainer
           key={comment.id}
           onClick={() => handleClickComment(comment.id)}
