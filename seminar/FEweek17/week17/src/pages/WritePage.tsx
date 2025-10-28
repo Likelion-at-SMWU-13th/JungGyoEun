@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 import styled from "styled-components";
 import Button from "../components/Button";
 
@@ -6,10 +6,10 @@ const WritePage = () => {
   const [author, setAuthor] = useState("");
   const [comment, setComment] = useState("");
 
-  const onChangeAuthor = (e) => {
+  const onChangeAuthor = (e: ChangeEvent<HTMLInputElement>) => {
     setAuthor(e.target.value);
   };
-  const onChangeComment = (e) => {
+  const onChangeComment = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setComment(e.target.value);
   };
   return (
