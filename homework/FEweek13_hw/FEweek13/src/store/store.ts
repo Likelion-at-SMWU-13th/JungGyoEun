@@ -1,11 +1,34 @@
 import { create } from "zustand";
 
-const useBookStore = create((set) => ({
+export interface Book {
+  id: number;
+  title: string;
+  author: string;
+  publisher: string;
+  date: string;
+  price: number;
+  imageUrl: string;
+}
+
+export interface WishlistItem extends Book {
+  quantity: number;
+  isFavorite: boolean;
+}
+
+export interface BookStore {
+  wishlist: WishlistItem[];
+  addBook: (book: Book) => void;
+  removeBook: (id: number) => void;
+  increaseQuantity: (id: number) => void;
+  decreaseQuantity: (id: number) => void;
+}
+
+const useBookStore = create<BookStore>((set) => ({
   // 위시리스트에 담긴 책들의 배열
   wishlist: [],
 
   // 책 추가
-  addBook: (book) => {
+  addBook: (book: Book) => {
     const title = book.title.trim();
     const author = book.author.trim();
     const publisher = book.publisher?.trim();
@@ -24,7 +47,7 @@ const useBookStore = create((set) => ({
           // 이미 있으면 수량만 증가
           const updatedList = state.wishlist.map((wishItem) =>
             wishItem.id === book.id
-              ? { ...wishItem, quantity: (wishItem.quantity ?? 1) + 1 }
+              ? { ...wishItem, quantity: wishItem.quantity + 1 }
               : wishItem
           );
           return { wishlist: updatedList };
@@ -52,13 +75,13 @@ const useBookStore = create((set) => ({
   },
 
   // 책 삭제
-  removeBook: (id) =>
+  removeBook: (id: number) =>
     set((state) => ({
       wishlist: state.wishlist.filter((wishItem) => wishItem.id !== id),
     })),
 
   // 수량 증가
-  increaseQuantity: (id) =>
+  increaseQuantity: (id: number) =>
     set((state) => ({
       wishlist: state.wishlist.map((wishItem) =>
         wishItem.id === id
@@ -68,7 +91,7 @@ const useBookStore = create((set) => ({
     })),
 
   // 수량 감소
-  decreaseQuantity: (id) =>
+  decreaseQuantity: (id: number) =>
     set((state) => ({
       wishlist: state.wishlist.map((wishItem) =>
         wishItem.id === id
