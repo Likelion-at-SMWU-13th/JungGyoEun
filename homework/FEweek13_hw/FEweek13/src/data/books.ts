@@ -1,4 +1,6 @@
-export const BOOKS = [
+import type { Book } from "../store/store.js";
+
+export const BOOKS: Book[] = [
   {
     id: 1,
     title: "가공범",
@@ -65,7 +67,7 @@ export const BOOKS = [
     author: "박곰희",
     publisher: "인플루엔셜",
     date: "2025.06.25",
-    price: 189000,
+    price: 18900,
     imageUrl:
       "https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791168342941.jpg",
   },
@@ -99,4 +101,4 @@ export const BOOKS = [
     imageUrl:
       "https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791141602376.jpg",
   },
-];
+] as const;
