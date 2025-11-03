@@ -1,12 +1,7 @@
-import * as S from "../styles/WishItem.styles";
 import useBookStore from "../store/store";
-import type { WishlistItem } from "../store/store";
+import * as S from "../styles/WishItem.styles";
 
-interface WishItemProps {
-  wishItem: WishlistItem[];
-}
-
-function WishItem({ wishItem }: WishItemProps) {
+function WishItem({ wishItem }) {
   const removeBook = useBookStore((state) => state.removeBook);
   const increaseQuantity = useBookStore((state) => state.increaseQuantity);
   const decreaseQuantity = useBookStore((state) => state.decreaseQuantity);
@@ -17,7 +12,7 @@ function WishItem({ wishItem }: WishItemProps) {
 
   // 총 금액 계산
   const totalPrice = wishItem.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+    (sum, item) => sum + item.price * (item.quantity ?? 1),
     0
   );
 

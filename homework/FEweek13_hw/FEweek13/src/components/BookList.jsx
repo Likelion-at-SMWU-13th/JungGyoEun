@@ -1,12 +1,6 @@
-import * as S from "../styles/BookList.styles.js";
-import type { Book } from "../store/store.ts";
+import * as S from "../styles/BookList.styles";
 
-interface BookListProps {
-  books: Book[];
-  onWishListClick: (book: Book) => void;
-}
-
-function BookList({ books, onWishListClick }: BookListProps) {
+function BookList({ books, onWishListClick }) {
   return (
     <S.BookListContainer>
       <S.MainTitle>교보문고 종합 월간 베스트 TOP 10</S.MainTitle>
